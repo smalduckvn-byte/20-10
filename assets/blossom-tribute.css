@@ -23,26 +23,13 @@
     animation: tribute-blossoms 8.5s ease-in-out 0.25s both;
 }
 
-#tiny-blossom-tribute .tribute-flower-giver {
-    position: absolute;
-    right: clamp(8px, 2vw, 30px);
-    bottom: max(18px, env(safe-area-inset-bottom));
-    width: auto;
-    height: min(43vh, 350px);
-    max-width: 34vw;
-    object-fit: contain;
-    object-position: left bottom;
-    opacity: 0;
-    filter: drop-shadow(0 8px 14px rgba(10, 16, 24, 0.28));
-    animation: tribute-arrival 8.5s cubic-bezier(.2, .75, .25, 1) 0.3s both;
-}
-
 #tiny-blossom-tribute .tribute-caption {
     position: absolute;
-    top: clamp(48px, 12vh, 105px);
-    right: clamp(16px, 4vw, 58px);
+    bottom: clamp(255px, 34vh, 300px);
+    left: clamp(12px, 3vw, 48px);
     box-sizing: border-box;
-    max-width: min(190px, 36vw);
+    width: min(190px, 24vw);
+    max-width: min(190px, 24vw);
     margin: 0;
     padding: 10px 15px;
     border: 1px solid rgba(239, 190, 200, 0.72);
@@ -63,12 +50,6 @@
     100% { opacity: 0; transform: translate3d(16px, 18px, 0) rotate(2deg); }
 }
 
-@keyframes tribute-arrival {
-    0% { opacity: 0; transform: translate3d(-105%, 12px, 0) scale(.94); }
-    18%, 72% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
-    100% { opacity: 0; transform: translate3d(0, 0, 0) scale(1); }
-}
-
 @keyframes tribute-caption {
     0%, 8% { opacity: 0; transform: translateY(8px) scale(.96); }
     18%, 72% { opacity: 1; transform: translateY(0) scale(1); }
@@ -82,18 +63,9 @@
         width: min(48vw, 230px);
     }
 
-    #tiny-blossom-tribute .tribute-flower-giver {
-        right: auto;
-        left: 0;
-        bottom: max(18px, env(safe-area-inset-bottom));
-        width: min(30vw, 125px);
-        height: auto;
-        max-width: min(30vw, 125px);
-    }
-
     #tiny-blossom-tribute .tribute-caption {
-        top: clamp(56px, 10vh, 84px);
-        right: 3vw;
+        bottom: clamp(112px, 20vh, 168px);
+        left: 3vw;
         width: min(48vw, 190px);
         max-width: min(48vw, 190px);
         padding: 8px 11px;
@@ -102,7 +74,6 @@
 
 @media (prefers-reduced-motion: reduce) {
     #tiny-blossom-tribute .tribute-blossoms,
-    #tiny-blossom-tribute .tribute-flower-giver,
     #tiny-blossom-tribute .tribute-caption {
         animation: none;
         opacity: 1;

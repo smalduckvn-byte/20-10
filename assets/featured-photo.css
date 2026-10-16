@@ -5,7 +5,7 @@
     right: auto;
     bottom: 0;
     display: grid;
-    grid-template-columns: 1.35fr 1fr;
+    grid-template-columns: 0.75fr 0.7fr 1.55fr;
     align-items: end;
     gap: clamp(8px, 2vw, 24px);
     width: min(94vw, 1150px);
@@ -31,11 +31,41 @@
     filter: drop-shadow(0 3px 8px rgba(58, 34, 43, .3));
 }
 
+#anh-hai-nguoi .energy-caption {
+    position: absolute;
+    top: clamp(4px, 1.2vh, 12px);
+    left: 50%;
+    z-index: 1;
+    box-sizing: border-box;
+    width: min(88%, 560px);
+    margin: 0;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, .72);
+    border-radius: 999px;
+    background: rgba(255, 248, 244, .94);
+    color: #754453;
+    font: 600 clamp(13px, 1.5vw, 18px)/1.35 "Be Vietnam Pro", sans-serif;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(20, 14, 22, .2);
+    transform: translateX(-50%);
+}
+
 @media screen and (max-width: 700px) and (orientation: portrait) {
     #anh-hai-nguoi {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(0, .82fr) minmax(0, 1.18fr);
         width: 96vw;
         height: min(36dvh, 300px);
         max-width: 96vw;
         gap: 2vw;
+    }
+
+    #anh-hai-nguoi .smile-photo-energy {
+        grid-column: 1 / -1;
+    }
+
+    #anh-hai-nguoi .energy-caption {
+        width: min(94%, 560px);
+        padding: 7px 12px;
     }
 }
