@@ -1,0 +1,22 @@
+#anh-hai-nguoi {
+    left: 50%;
+    right: auto;
+    width: min(94vw, 1150px);
+    height: min(46vh, 420px);
+    max-width: 94vw;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: translate(-50%, 24px);
+}
+
+#anh-hai-nguoi.hien-thi {
+    transform: translate(-50%, 0);
+}
+
+@media screen and (max-width: 700px) and (orientation: portrait) {
+    #anh-hai-nguoi {
+        width: 96vw;
+        height: min(36dvh, 300px);
+        max-width: 96vw;
+    }
+}
