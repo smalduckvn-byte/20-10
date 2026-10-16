@@ -1,0 +1,20 @@
+#tiny-lyric-zone.music-effects-active::before {
+    content: "";
+    position: absolute;
+    inset: -12%;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(255, 172, 211, .28), rgba(138, 113, 255, .12) 38%, transparent 72%);
+    opacity: var(--music-beat, 0);
+    transform: scale(calc(.94 + var(--music-beat, 0) * .12));
+    filter: blur(12px);
+    pointer-events: none;
+    will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #tiny-lyric-zone.music-effects-active::before {
+        opacity: .18;
+        transform: none;
+        transition: none;
+    }
+}
