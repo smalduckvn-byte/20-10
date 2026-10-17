@@ -1,0 +1,27 @@
+#health-class-photo {
+    position: absolute;
+    right: clamp(16px, 3.5vw, 56px);
+    bottom: 6vh;
+    z-index: 8;
+    width: min(36vw, 460px);
+    max-height: 58vh;
+    object-fit: contain;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 1s ease-in-out, transform 1s ease-out;
+    pointer-events: none;
+}
+
+#health-class-photo.hien-thi {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+    #health-class-photo {
+        right: 2vw;
+        bottom: 8vh;
+        width: min(62vw, 340px);
+        max-height: 42vh;
+    }
+}
