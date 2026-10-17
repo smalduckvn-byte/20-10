@@ -1,0 +1,27 @@
+#beauty-class-photo {
+    position: absolute;
+    right: clamp(16px, 3.5vw, 56px);
+    bottom: 6vh;
+    z-index: 8;
+    width: min(40vw, 520px);
+    max-height: 52vh;
+    object-fit: contain;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 1s ease-in-out, transform 1s ease-out;
+    pointer-events: none;
+}
+
+#beauty-class-photo.hien-thi {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+    #beauty-class-photo {
+        right: 2vw;
+        bottom: 7vh;
+        width: min(76vw, 400px);
+        max-height: 44vh;
+    }
+}
